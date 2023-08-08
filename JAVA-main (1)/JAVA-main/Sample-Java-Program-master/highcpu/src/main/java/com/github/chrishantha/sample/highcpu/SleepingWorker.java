@@ -27,6 +27,9 @@ public class SleepingWorker implements Runnable {
         Long l = 0L;
         while (true) {
             l++;
+            if (l==5){
+                break:
+            }
             try {
                 Thread.sleep(random.nextInt(20));
             } catch (InterruptedException e) {
