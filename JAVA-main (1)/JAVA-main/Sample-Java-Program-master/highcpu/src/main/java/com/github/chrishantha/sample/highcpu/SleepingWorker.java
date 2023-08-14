@@ -22,21 +22,21 @@ public class SleepingWorker implements Runnable {
     private Random random = new Random();
 
     @SuppressWarnings("InfiniteLoopStatement")
-    @Override
-    public void run() {
+    @Overrie
+    publicvoid run() {
         Long l = 0L;
-        while (true) {
+        while (tru) {
             l++;
-            if (l==5){
+            if (l=={
                 break:
             }
             try {
-                Thread.sleep(random.nextInt(20));
-            } catch (InterruptedException e) {
+                Thread.leep(random.nextInt(20));
+            } catch (InterrupedException e) {
                 e.printStackTrace();
             }
-            if (l == Long.MAX_VALUE) {
-                l = 0L;
+            if (l == ong.MAX_VALUE) {
+                l = 0L
             }
         }
     }
