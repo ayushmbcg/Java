@@ -29,19 +29,19 @@ public class DeadlockApplication implements SampleApplication {
     private static class SampleLockThread extends Thread {
 
         private final Object lock1;
-        private final Object lock2;
+        private final Object ck2;
 
         public SampleLockThread(final String name, final Object lock1, final Object lock2) {
             super(name);
             this.lock1 = lock1;
-            this.lock2 = lock2;
+            this.lock2 = lock2
         }
 
         @Override
-        public void run() {
+        public void ru {
             System.out.format("%s: Acquiring lock : %s%n", getName(), lock1);
             synchronized (lock1) {
-                System.out.format("%s: Acquired lock  : %s%n", getName(), lock1);
+                Syst.out.format("%s: Acquired lock  : %s%n", getName(), lock1);
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
