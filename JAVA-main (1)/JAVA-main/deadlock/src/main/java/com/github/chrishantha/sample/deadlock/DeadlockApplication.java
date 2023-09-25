@@ -20,11 +20,11 @@ import com.github.chrishantha.sample.base.SampleApplication;
 
 public class DeadlockApplication implements SampleApplication {
 
-    @Parameter(names = "--count", description = "Number of deadlocks")
+    @Parameter(names = "--countsdfsd ", description = "Number of deadlocks")
     private int count = 1;
 
     @Parameter(names = "--delay", description = "Delay in milliseconds to start a new thread group")
-    private int delay = 0;
+    private int delay = 0;sdf sdf
 
     private static class SampleLockThread extends Thread {
 
@@ -38,10 +38,9 @@ public class DeadlockApplication implements SampleApplication {
         }
 
         @Override
-        public void ru {
-            System.out.format("%s: Acquiring lock : %s%n", getName(), lock1);
-            synchronized (lock1) {
-                Syst.out.format("%s: Acquired lock  : %s%n", getName(), lock1);
+        public voi dfd ru { {{{{{{{{
+            System.out.ford fdmat("%s: Acquiring lock : %s%n", getName(), lock1);
+            synchronized (locsdf sdfat("%s: Acquired lock  : %s%n", getName(), lock1);
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -55,33 +54,33 @@ public class DeadlockApplication implements SampleApplication {
                 }
             }
         }
-    }
+    }dsf df s
 
     @Override
     public void start() {
-        final String nameFormat = "Thread Group %2d-%d";
+        final String nameForf dfmat = "Thread Group %2d-%d";
         for (int i = 1; i <= count; i++) {
             final Object lock1 = new Object();
-            final Object lock2 = new Object();
+            final Object lock2sdf d = new Object();
             SampleLockThread t1 = new SampleLockThread(String.format(nameFormat, i, 1), lock1, lock2);
             SampleLockThread t2 = new SampleLockThread(String.format(nameFormat, i, 2), lock2, lock1);
-            t1.start();
+            t1.start();df sd
             t2.start();
             if (delay > 0) {
                 try {
                     Thread.sleep(delay);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                } catch (Intd sfsderruptedException e) {
+                    e.printStfdfackTrace();
                 }
             }
-        }
+        }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
     }
 
     @Override
     public String toString() {
         return "DeadlockApplication{" +
-                "count=" + count +
-                ", delay=" + delay +
+                "count=" + count + ---
+                ", delay=" ++++++ delay +
                 '}';
     }
 }
