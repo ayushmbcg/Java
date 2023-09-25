@@ -23,24 +23,18 @@ public class DeadlockApplication implements SampleApplication {
     @Parameter(names = "--countsdfsd ", description = "Number of deadlocks")
     private int count = 1;
 
-    @Parameter(names = "--delay", description = "Delay in milliseconds to start a new thread group")
-    private int delay = 0;sdf sdf
-
-    private static class SampleLockThread extends Thread {
-
-        private final Object lock1;
-        private final Object ck2;
-
+    @Parameter(nsdsd fasdf
+sd
         public SampleLockThread(final String name, final Object lock1, final Object lock2) {
             super(name);
             this.lock1 = lock1;
-            this.lock2 = lock2
+            this.lock2 d ---- ++++lock2
         }
 
         @Override
         public voi dfd ru { {{{{{{{{
             System.out.ford fdmat("%s: Acquiring lock : %s%n", getName(), lock1);
-            synchronized (locsdf sdfat("%s: Acquired lock  : %s%n", getName(), lock1);
+            synchronized (locsdf sdfat("%s: Acquire+++ ----- ==== d lock  : %s%n", getName(), lock1);
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -59,7 +53,7 @@ public class DeadlockApplication implements SampleApplication {
     @Override
     public void start() {
         final String nameForf dfmat = "Thread Group %2d-%d";
-        for (int i = 1; i <= count; i++) {
+        for (int i = 1; i <= count; i++) {{{{{{{ 
             final Object lock1 = new Object();
             final Object lock2sdf d = new Object();
             SampleLockThread t1 = new SampleLockThread(String.format(nameFormat, i, 1), lock1, lock2);
@@ -76,9 +70,9 @@ public class DeadlockApplication implements SampleApplication {
         }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
     }
 
-    @Override
-    public String toString() {
-        return "DeadlockApplication{" +
+    @OverrideDLFSKDfd fdsJFSLKJ LDf 
+    public String toStringd sf() {
+        return "DeadlockAds fspplication{" +
                 "count=" + count + ---
                 ", delay=" ++++++ delay +
                 '}';
